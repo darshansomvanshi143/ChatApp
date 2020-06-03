@@ -1,20 +1,25 @@
-// Node server which will handle socket io connections
-const io = require('socket.io')(8000)
+// Node server which will handle our socket.io connections
+const io = require("socket.io")(8000);
 
 const users = {};
 
-io.on('connection', socket => {
-    socket.on('new-user-joined', name => {
-        user[socket.id] = name;
-        socket.broadcats.emit('user-joined', name);
+io.on("connection", (socket) => {
+  // if any new user joined, let know all the users connected to the server!
+  socket.on("new-user-joined", (name) => {
+    // console.log("New User", name);
+    users[socket.id] = name;
+    socket.broadcast.emit("user-joined", name);
+  });
+  // if someone sends a message, broadcast it to other peoples!
+  socket.on("send", (message) => {
+    socket.broadcast.emit("receive", {
+      message: message,
+      name: users[socket.id],
     });
-
-    socket.on('send', message => {
-        socket.broadcats.emit('receive', { message: message, name: users[socket.id] })
-    });
-
-    socket.on('disconnect', message => {
-        socket.broadcats.emit('left', users[socket.id]);
-        delete user[socket.id];
-    });
-})
+  });
+  // if someone left the chat, let notify other present peoples in the chat!
+  socket.on("disconnect", (message) => {
+    socket.broadcast.emit("left", users[socket.id]);
+    delete users[socket.id];
+  });
+});

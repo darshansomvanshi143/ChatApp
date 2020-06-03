@@ -1,15 +1,14 @@
 {
   "name": "nodeserver",
   "version": "1.0.0",
-  "description": "This is a node server for our WhatsApp Application",
+  "description": "This is the node server for chat application",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Yogesh",
+  "author": "yogesh shinde",
   "license": "ISC",
   "dependencies": {
     "socket.io": "^2.3.0"
-  },
-  "devDependencies": {}
+  }
 }

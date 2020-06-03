@@ -1,76 +1,74 @@
 body {
-    height: 100vh;
-    background-image: linear-gradient(rgb(255, 255, 255), rgb(27, 235, 138));
+  height: 100vh;
+  background-image: linear-gradient(rgb(255, 255, 255), rgb(11, 240, 144));
+}
+
+h1 {
+  margin-top: 12px;
+  font-size: 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
 }
 
 .logo {
-    display: block;
-    margin: auto;
-    width: 50px;
-    height: 50px;
+  display: block;
+  margin: auto;
+  width: 50px;
+  height: 50px;
 }
- 
-.h1 {
-    margin-top: 12px;
-    font-size: 30px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
-}
-.container {
-    max-width: 955px;
-    border: 2px solid black;
-    border-radius: 13px;
-    margin: auto;
-    height: 60vh;
-    padding: 33px;
-    overflow-y: auto;
-    margin-bottom: 23px;
-}
-
-.message {
-    background-color: rgb(38, 236, 81);
-    width: 24%;
-    padding: 10px;
-    margin: 17px 10px;
-    border: 2px solid black;
-    border-radius: 12px;
-}
-
-.left {
-    float: left;
-    clear: both;
-}
-
-.right {
-    float: right;
-    clear: both;
-}
-
 #send-container {
-    display: block;
-    margin: auto;
-    text-align: center;
-    max-width: 1085px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: block;
+  margin: auto;
+  text-align: center;
+  max-width: 1085px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #messageInp {
-    width: 80%;
-    border: 2px solid black;
-    border-radius: 7px;
-    height: 30px;
-    font-size: 22px;
+  width: 80%;
+  border: 2px solid black;
+  border-radius: 5px;
+  height: 30px;
+  font-size: 22px;
 }
 
 .btn {
-    margin: 0 5px;
-    width: 9%;
-    cursor: pointer;
-    border: 2px solid black;
-    border-radius: 7px;
-    height: 30px;
+  margin-left: 5px;
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 6px;
+  height: 34px;
 }
 
+.container {
+  max-width: 955px;
+  border: 2px solid black;
+  border-radius: 15px;
+  margin: auto;
+  height: 60vh;
+  padding: 33px;
+  overflow: auto;
+  margin-bottom: 23px;
+}
+
+.message {
+  background-color: rgb(173, 255, 170);
+  width: 85%;
+  padding: 10px;
+  margin: 20px -30px;
+  border: 1px solid black;
+  border-radius: 14px;
+}
+
+.left {
+  float: left;
+  clear: both;
+}
+
+.right {
+  float: right;
+  clear: both;
+}
